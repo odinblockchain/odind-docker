@@ -13,7 +13,7 @@ script:
   - docker ps
   - docker ps -a
   - docker exec -ti odind-docker w
-  - docker exec odind-docker odin-cli getstakinginfo
+  - docker exec odind-docker odin-cli getinfo
 
 after_success:
   - wget https://raw.githubusercontent.com/k3rn31p4nic/travis-ci-discord-webhook/master/send.sh
