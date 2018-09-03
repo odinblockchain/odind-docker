@@ -1,0 +1,25 @@
+sudo: required
+language: bash
+services: 
+  - docker
+
+before_install:
+  - git clone https://github.com/chrishasl/odind-docker odind-docker
+  - docker build -t odind-docker .
+
+script:
+  - sleep 10
+  - docker run --rm -d --name=odind-docker odind-docker
+  - docker ps
+  - docker ps -a
+  - docker exec -ti odind-docker w
+  - docker exec odind-docker odin-cli getstakinginfo
+
+after_success:
+  - wget https://raw.githubusercontent.com/k3rn31p4nic/travis-ci-discord-webhook/master/send.sh
+  - chmod +x send.sh
+  - ./send.sh success $WEBHOOK_URL
+after_failure:
+  - wget https://raw.githubusercontent.com/k3rn31p4nic/travis-ci-discord-webhook/master/send.sh
+  - chmod +x send.sh
+  - ./send.sh failure $WEBHOOK_URL
