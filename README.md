@@ -3,6 +3,7 @@
 # odind-docker
 
 [![Build Status](https://travis-ci.org/chrishasl/odind-docker.svg?branch=master)](https://travis-ci.org/chrishasl/odind-docker)
+[![](https://images.microbadger.com/badges/image/odinblockchain/odind-docker.svg)](https://microbadger.com/images/odinblockchain/odind-docker)
 
 Easily provision [odind](https://odinblockchain.org/) using [Docker](https://www.docker.com/)
 
