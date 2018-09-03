@@ -8,12 +8,12 @@ before_install:
   - docker build -t odind-docker .
 
 script:
-  - sleep 10
+  - sleep 5
   - docker run --rm -d --name=odind-docker odind-docker
   - docker ps -a
   - docker exec -ti odind-docker w
   - docker exec -ti odind-docker ps -ef 
-  - docker exec -it odind-docker netstat -tulpn
+  - sleep 5
   - docker exec -it odind-docker odin-cli getinfo
 
 after_success:
