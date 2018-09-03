@@ -1,4 +1,4 @@
-<img align="left" width="100" height="100" src="https://odinblockchain.org/wp-content/uploads/2018/07/800px-black-circle-logo-with-text.png">
+<img width="150" height="150" src="https://odinblockchain.org/wp-content/uploads/2018/07/800px-black-circle-logo-with-text.png">
 
 # odind-docker
 
