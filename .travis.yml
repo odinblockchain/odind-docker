@@ -10,10 +10,11 @@ before_install:
 script:
   - sleep 10
   - docker run --rm -d --name=odind-docker odind-docker
-  - docker ps
   - docker ps -a
   - docker exec -ti odind-docker w
-  - docker exec odind-docker odin-cli getinfo
+  - docker exec -ti odind-docker ps -ef 
+  - docker exec -it odind-docker netstat -tulpn
+  - docker exec -it odind-docker odin-cli getinfo
 
 after_success:
   - wget https://raw.githubusercontent.com/k3rn31p4nic/travis-ci-discord-webhook/master/send.sh
