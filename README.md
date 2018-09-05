@@ -8,9 +8,12 @@
 Easily provision [odind](https://odinblockchain.org/) using [Docker](https://www.docker.com/)
 
 
+## Quickstart from Docker Hub
+```
+docker run --rm -d --name=odind-docker odinblockchain/odind-docker
+```
 
-
-## Docker build and run
+## Docker build and run from source
 ```
 docker build -t odind-docker .
 docker run --rm -d --name=odind-docker odind-docker
