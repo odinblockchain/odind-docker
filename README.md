@@ -22,6 +22,7 @@ docker run --rm -d -v ~/odin-wallet/:/root/.odin/ --name=odind-docker odind-dock
 ## Staking
 ```
 docker exec odind-docker odin-cli getnewaddress
-docker exec odind-docker odin-cli walletpassphrase "your secret phrase" 9999999999 true
+docker exec odind-docker odin-cli encryptwallet "yoursecretpass"
+docker exec odind-docker odin-cli walletpassphrase "yoursecretpass" 9999999999 true
 docker exec odind-docker odin-cli getstakingstatus
 ```
