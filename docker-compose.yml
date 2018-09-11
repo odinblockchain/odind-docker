@@ -1,0 +1,11 @@
+version: '3'
+services:
+  odind:
+    image: odind-docker
+    build: .
+    container_name: odind-docker
+    restart: always
+    volumes:
+      - ~/odin-wallet/:/root/.odin/
+    ports:
+      - 34221:34222
