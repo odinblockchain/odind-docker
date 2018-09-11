@@ -10,11 +10,11 @@ Easily provision [odind](https://odinblockchain.org/) using [Docker](https://www
 
 ## Quickstart from Docker Hub
 ```
-docker run --rm -d --name=odind-docker odinblockchain/odind-docker
+docker run --rm -d ~/odin-wallet/:/root/.odin/ --name=odind-docker odinblockchain/odind-docker
 ```
 
 ## Docker build and run from source
 ```
 docker build -t odind-docker .
-docker run --rm -d --name=odind-docker odind-docker
+docker run --rm -d ~/odin-wallet/:/root/.odin/ --name=odind-docker odind-docker
 ```
