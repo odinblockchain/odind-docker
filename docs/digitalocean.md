@@ -17,4 +17,4 @@ sudo chmod 600 /var/swap.img
 sudo swapon /var/swap.img
 ```
 
-Follow usual install instructions in the [main repo README](https://github.com/chrishasl/odind-docker/blob/master/README.md)
+Follow usual install instructions in the [main repo README](https://github.com/odinblockchain/odind-docker/blob/master/README.md)
