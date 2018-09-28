@@ -19,13 +19,12 @@ RUN add-apt-repository -y ppa:bitcoin/bitcoin \
 
 
 # Clone git repo and compile
-RUN git clone https://github.com/Manbearpixel/Odin.git \
+RUN git clone https://github.com/odinblockchain/Odin.git \
 	&& cd Odin \
-	&& git checkout odin-fork \
 	&& ./autogen.sh \
 	&& ./configure \
 	&& make \
 	&& make install
 
 CMD ["sh","-c","odind"]
-EXPOSE 34221 34222
+EXPOSE 22100 22101
