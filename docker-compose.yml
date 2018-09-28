@@ -8,4 +8,4 @@ services:
     volumes:
       - ~/odin-wallet/:/root/.odin/
     ports:
-      - 34221:34222
+      - 22100:22101
