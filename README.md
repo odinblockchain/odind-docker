@@ -16,6 +16,7 @@ docker run --rm -d -v ~/odin-wallet/:/root/.odin/ --name=odind-docker odinblockc
 
 ## Docker build and run from source
 ```
+git clone https://github.com/odinblockchain/odind-docker.git && cd odind-docker
 docker build -t odind-docker .
 docker run --rm -d -v ~/odin-wallet/:/root/.odin/ --name=odind-docker odind-docker
 ```
