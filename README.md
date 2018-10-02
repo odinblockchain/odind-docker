@@ -1,4 +1,4 @@
-<img align="left" width="150" height="150" src="https://odinblockchain.org/wp-content/uploads/2018/07/800px-black-circle-logo-with-text.png">
+<img align="left" width="150" height="150" src="https://avatars0.githubusercontent.com/u/35367637?s=200&v=4">
 
 # odind-docker
 
@@ -17,6 +17,8 @@ docker run --rm -d -v ~/odin-wallet/:/root/.odin/ --name=odind-docker odinblockc
 ## Docker build and run from source
 ```
 git clone https://github.com/odinblockchain/odind-docker.git && cd odind-docker
+```
+```
 docker build -t odind-docker .
 docker run --rm -d -v ~/odin-wallet/:/root/.odin/ --name=odind-docker odind-docker
 ```
@@ -28,3 +30,7 @@ docker exec odind-docker odin-cli encryptwallet "yoursecretpass"
 docker exec odind-docker odin-cli walletpassphrase "yoursecretpass" 9999999999 true
 docker exec odind-docker odin-cli getstakingstatus
 ```
+
+## Masternodes
+
+Install odind via quickstart or from source, then perform the additional steps detailed at the [wiki](https://github.com/odinblockchain/wiki/wiki/odin-client--docker)
