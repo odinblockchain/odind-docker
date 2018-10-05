@@ -27,6 +27,9 @@ docker run --rm -d -v ~/odin-wallet/:/root/.odin/ --name=odind-docker odind-dock
 ```
 docker exec odind-docker odin-cli getnewaddress
 docker exec odind-docker odin-cli encryptwallet "yoursecretpass"
+```
+Upon encrypting a wallet odind will stop, so will need to be restarted using the relevant docker run command
+```
 docker exec odind-docker odin-cli walletpassphrase "yoursecretpass" 9999999999 true
 docker exec odind-docker odin-cli getstakingstatus
 ```
