@@ -11,7 +11,7 @@ Easily provision [odind](https://odinblockchain.org/) using [Docker](https://www
 
 ## Quickstart from Docker Hub
 ```
-docker run --rm -d -v ~/odin-wallet/:/root/.odin/ --name=odind-docker odinblockchain/odind-docker
+docker run --restart always -d -v ~/odin-wallet/:/root/.odin/ --name=odind-docker odinblockchain/odind-docker
 ```
 
 ## Docker build and run from source
@@ -20,7 +20,7 @@ git clone https://github.com/odinblockchain/odind-docker.git && cd odind-docker
 ```
 ```
 docker build -t odind-docker .
-docker run --rm -d -v ~/odin-wallet/:/root/.odin/ --name=odind-docker odind-docker
+docker run --restart always -d -v ~/odin-wallet/:/root/.odin/ --name=odind-docker odind-docker
 ```
 
 ## Staking
