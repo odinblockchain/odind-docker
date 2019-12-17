@@ -21,6 +21,7 @@ RUN add-apt-repository -y ppa:bitcoin/bitcoin \
 # Clone git repo and compile
 RUN git clone https://github.com/odinblockchain/Odin.git \
 	&& cd Odin \
+  && git checkout v1.6.6 \
 	&& ./autogen.sh \
 	&& ./configure \
 	&& make \
